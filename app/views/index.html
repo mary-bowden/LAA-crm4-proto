@@ -1,20 +1,139 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% block pageTitle %}
+  Home – {{ serviceName }} - GOV.UK
+{% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">CRM 4
+        </h1>
+      </div>
+    </div>
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        </h1>
+        <p>This is the CRM 4 prototype for Providers and Caseworkers. This prototype is <strong>NOT</strong> fully functional
+        </p>
+        <p>Please <a href="/manage-prototype/clear-data" class="govuk-link--no-visited-state">clear data</a> to delete all stored data and re-set the prototype between journeys.</p>
+  
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">          
+            <ol class="app-task-list">
+              <li> 
+                <h2 class="app-task-list__section">
+                  <span class="app-task-list__section-number">1. </span> 
+                  Core functionality
+                </h2>
+                <ul class="app-task-list__items">
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">TIX No.</span><br>
+                    <span class="app-task-list__task-name">
+                      <a href="/cookies" class="govuk-link--no-visited-state" aria-describedby="create-status">
+                        Cookies
+                      </a>
+                    </span>
+                    <span class="app-task-list__tag" id="create-status">In design</span>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">          
+            <ol class="app-task-list">
+              <li> 
+                <h2 class="app-task-list__section">
+                  <span class="app-task-list__section-number">2. </span> 
+                  Provider journeys
+                </h2>
+                <ul class="app-task-list__items">
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">TIX No.</span><br>
+                    <span class="app-task-list__task-name">
+                      <a href="provider/laa-login" class="govuk-link--no-visited-state" aria-describedby="reginterest-status">
+                        LAA Portal Login
+                       </a>
+                    </span>
+                    <span class="app-task-list__tag" id="create-status">In design</span>
+                    <!--errors-->
+                    <br><br><br><br>
+                    <details class="govuk-details govuk-!-margin-0" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Error pages
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <a href="" class="govuk-link--no-visited-state" aria-describedby="reginterest-status">
+                          Error - a specific error case
+                        </a>
+                      </div>
+                    </details>
+                    <!---->
+                  </li> 
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">          
+            <ol class="app-task-list">
+              <li>
+                <h2 class="app-task-list__section">
+                  <span class="app-task-list__section-number">3. </span> 
+                  Caseworker journeys
+                </h2>
+                <ul class="app-task-list__items">
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">TIX No.</span><br>
+                    <span class="app-task-list__task-name">
+                      <a href="" class="govuk-link--no-visited-state" aria-describedby="signin-status">
+                        Some story here
+                      </a>
+                    </span>
+                    <span class="app-task-list__tag" id="reginterest-direct-status">In design</span>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
-  </div>
-</div>
+      <div class="govuk-grid-column-one-third">
+        <aside class="app-related-items" role="complementary">
+          <p>
+            <a class="govuk-link--no-visited-state" href="/trs-layout">Template with components</a>
+          </p>
+          <h2 class="govuk-heading-m" id="subsection-title">Provider key states</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a href="" class="govuk-link--no-visited-state" aria-describedby="signin-status">
+                  Some story here
+                </a>
+              </li>  
+            </ul>
+          </nav>
+          <h2 class="govuk-heading-m" id="subsection-title">Caseworker key states</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a href="" class="govuk-link--no-visited-state" aria-describedby="signin-status">
+                  Some story here
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+  
+      </div>
+    </div>
 
 {% endblock %}
