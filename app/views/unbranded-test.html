@@ -4,6 +4,10 @@
   Page – {{ serviceName }} - GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+  {% include "includes/banner.html"%}
+{% endblock %}
+
 {% block content %}
 
   <table role="presentation" width="100%" style="border-collapse: collapse;min-width: 100%;width: 100% !important;" cellpadding="0" cellspacing="0" border="0">
